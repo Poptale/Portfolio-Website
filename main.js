@@ -4,7 +4,23 @@ let profile = document.querySelector(".profile");
 let container = document.querySelector(".container");
 let profilePage = document.querySelector(".profile-page");
 let loading = document.querySelector(".loading");
+let music = new Audio("Music.mp3");
+let button = document.querySelector("#music");
+let isPlaying = false;
+music.loop = true;
 
+button.addEventListener("click", ()=>{
+    if(!isPlaying){
+        button.innerHTML = "Music on";
+        music.play();
+        isPlaying = true;
+    }
+    else{
+        button.innerHTML = "Music off";
+        music.pause();
+        isPlaying = false;
+    }
+});
 
 window.addEventListener("mousemove", (e)=>{
     let posX = e.clientX;
