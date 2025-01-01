@@ -1,0 +1,598 @@
+@font-face {
+    font-family: Nervada;
+    src: url(font.ttf);
+}
+
+@font-face {
+    font-family: Sign;
+    src: url(Andrea\ Bellarosa.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px; /* Horizontal scrollbar */
+}
+
+/* Track styling */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Thumb styling */
+::-webkit-scrollbar-thumb {
+    background: #383838;
+    border-radius: 5px;
+}
+
+/* Corner styling */
+::-webkit-scrollbar-corner {
+    background: #282828;
+}
+
+
+.container{
+    display: block;
+}
+
+.animation{
+    height: 100vh;
+    background-color: #1e1e1e;
+    position: fixed;
+    width: 200%;
+    top: 0;
+    z-index: 100000000000;
+    animation: loading forwards 1.5s;
+}
+@keyframes loading {
+    0%{
+        right: 100%;
+    }
+    100%{
+        right: -200%;
+    }
+}
+
+
+.profile-page{
+    display: block;
+    overflow: hidden;
+}
+
+.trail{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+body{
+    height: 100vh;
+    background-color: black;
+}
+
+.img{
+    pointer-events: none;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    height: 700px;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0;
+    animation: 1s forwards opacity;
+    animation-delay: 0.6s;
+}
+@keyframes opacity {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.name{
+    font-family: Nervada;
+    font-weight: 100;
+    font-size: 110px;
+    position: absolute;
+    top: 360px;
+    left: 430px;
+    opacity: 0.8;
+}
+
+.top{
+    position: relative;
+    animation: animeeee forwards 0.6s;
+    animation-delay: 1.6s;
+    opacity: 0;
+}
+
+@keyframes animeeee {
+    0%{
+        top: 50px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 0.8;
+    }
+}
+
+.title{
+    font-family: Nervada;
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    left: 700px;
+    font-weight: 100;
+    opacity: 0.8;
+
+}
+
+.work{
+    position: absolute;
+    font-family: Nervada;
+    top: 50px;
+    left: 430px;
+    font-weight: 100;
+    opacity: 0.8;
+
+}
+
+.location{
+    font-family: Nervada;
+    font-weight: 100;
+    font-size: 20px;
+    position: absolute;
+    top: 500px;
+    left: 680px;
+    opacity: 0.8;
+
+}
+
+.logo{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    height: 700px;
+    object-fit: cover;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 70px;
+    cursor: pointer;
+}
+
+.header{
+    position: fixed;
+    top: 50px;
+    animation: 0.6s forwards animee;
+    z-index: 1000000000000000000000000000;
+}
+@keyframes animee {
+    0%{
+        top: 0;
+        opacity: 0;
+    }
+}
+
+.header p{
+    position: fixed;
+    right: 70px;
+    color: #edcd6c;
+    cursor: pointer;
+}
+
+.footer{
+    position: fixed;
+    top: 600px;
+    animation: anime 0.5s forwards;
+    z-index: 10000000000000000000000000000000;
+}
+@keyframes anime {
+    0%{
+        top: 650px;
+        opacity: 0;
+    }
+}
+
+.f{
+    position: fixed;
+    color: #edcd6c;
+}
+
+.c{
+    left: 40px;
+}
+
+.profile{
+    right: 70px;
+    cursor: pointer;
+}
+
+.head{
+    position: relative;
+    top: 15px;
+    animation: animeee forwards 0.6s;
+    animation-delay: 1.6s;
+    opacity: 0;
+}
+
+@keyframes animeee {
+    0%{
+        top: -65px;
+        opacity: 0;
+    }
+    100%{
+        top: 15px;
+        opacity: 1;
+    }
+}
+
+
+.landing-page-profile{
+    background-color: #101010;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myimage{
+    pointer-events: none;
+    rotate: 20deg;
+    height: 500px;
+    z-index: 10;
+    animation: image 1s forwards;
+    animation-delay: 2.2s;
+    position: absolute;
+    opacity: 0;
+}
+
+@keyframes image {
+    0%{
+        opacity: 0;
+        top: 180px;
+    }
+    100%{
+        opacity: 1;
+        top: 100px;
+    }
+}
+
+.profile-heading{
+    font-family: Nervada;
+    font-weight: 100;
+    position: absolute;
+    font-size: 180px;
+    font-style: italic;
+    top: 0;
+    letter-spacing: -10px;
+    opacity: 0;
+    animation: profile 1s forwards;
+    animation-delay: 1.5s;
+    pointer-events: none;
+}
+
+@keyframes profile {
+    0%{
+        opacity: 0;
+        top: 100px;
+    }
+    100%{
+        opacity: 0.9;
+        top: 0;
+    }
+}
+
+.head1{
+    top: 160px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    animation: profilee 1s forwards;
+    animation-delay: 1.6s;
+
+}
+
+@keyframes profilee {
+    0%{
+        opacity: 0;
+        top: 260px;
+    }
+    100%{
+        opacity: 0.5;
+        top: 160px;
+    }
+}
+
+.head2{
+    top: 320px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    animation: profileee 1s forwards;
+    animation-delay: 1.7s;
+
+}
+
+@keyframes profileee {
+    0%{
+        opacity: 0;
+        top: 420px;
+    }
+    100%{
+        opacity: 0.5;
+        top: 320px;
+    }
+}
+
+.head3{
+    top: 480px;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    animation: profileeee 1s forwards;
+    animation-delay: 1.8s;
+
+}
+
+@keyframes profileeee {
+    0%{
+        opacity: 0;
+        top: 580px;
+    }
+    100%{
+        opacity: 0.5;
+        top: 480px;
+    }
+}
+
+.sign{
+    font-family: Sign;
+    font-weight: 500;
+    font-size: 80px;
+    rotate: -8deg;
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    z-index: 10;
+    animation: profileeeee 1s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes profileeeee {
+    0%{
+        opacity: 0;
+        top: 500px;
+    }
+    100%{
+        opacity: 1;
+        top: 400px;
+    }
+}
+
+.hobbies-section{
+    height: 180vh;
+    background-color: #101010;
+}
+
+.hobbies{
+    font-size: 110px;
+    font-family: Nervada;
+    font-weight: 100;
+    font-style: italic;
+    padding: 120px 0 0 400px;
+    position: relative;
+}
+
+.hobbies::before{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 350px;
+    background-color: #fff;
+    top: 220px;
+    left: 40px;
+    background: linear-gradient(to right, transparent, #fff);
+
+}
+
+
+.hobbies::after{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 350px;
+    background-color: #fff;
+    top: 220px;
+    left: 1150px;
+    background: linear-gradient(to right, #fff, transparent);
+
+}
+
+.coding{
+    padding-top: 80px;
+}
+
+.chess{
+    font-family: nervada;
+    letter-spacing: 4px;
+    font-size: 70px;
+    text-align: center;
+    opacity: 0.8;
+    z-index: 10;
+    position: relative;
+    mix-blend-mode: difference;
+    cursor: pointer;
+}
+
+.elem{
+    position: relative;
+    cursor: pointer;
+}
+
+.elemImg{
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    transform: translate(-50%, -150%);
+    opacity: 0;
+    transition: 0.5s All linear;
+}
+
+.img1{
+    transform: translate(-50%, -50%);
+}
+
+.img2{
+    transform: translate(-50%, -100%);
+}
+
+.skills-section{
+    background-color: #101010;
+    height: 150vh;
+    position: relative;
+}
+
+.skills::after{
+    left: 1000px;
+    width: 500px;
+    background: linear-gradient(to right, #fff, transparent);
+}
+
+.skill{
+    font-family: serif;
+    font-weight: 100;
+    position: relative;
+    font-size: 25px;
+}
+
+.skill::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100px;
+    background-color: #fff;
+    top: 18px;
+    left: -110px;
+}
+
+ul{
+    position: absolute;
+    top: 400px;
+    left: 150px;
+}
+
+.line{
+    height: 1000px;
+    width: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 230px;
+    left: 40px;
+    background: linear-gradient(to top, transparent, #fff, transparent);
+
+}
+
+.frameworks{
+    top: 700px;
+}
+
+.about{
+    left: -20px;
+}
+
+.about::before{
+    width: 350px;
+}
+
+.about::after{
+    left: 1250px;
+    width: 250px;
+}
+
+.about-section{
+    height: 250vh;
+    background-color: #101010;
+}
+
+.about-me{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 60px;
+    font-family: serif;
+    font-weight: 100;
+    line-height: 38px;
+    letter-spacing: 0px;
+}
+
+.qestions{
+    text-align: center;
+    font-family: nervada;
+    opacity: 0.8;
+    font-size: 50px;
+    padding: 50px 0 0px 0;
+}
+
+.love{
+    font-family: Sign;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.curly{
+    font-size: 300px;
+    font-weight: 100;
+    position: absolute;
+    left: 600px;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.lan{
+    font-family: nervada;
+    font-size: 50px;
+    opacity: 0.9;
+    position: absolute;
+    top: 470px;
+    left: 750px;
+
+}
+
+.frame{
+    top: 760px;
+}
+
+.curly2{
+    top: 600px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
