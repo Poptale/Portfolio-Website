@@ -1,13 +1,12 @@
 @font-face {
     font-family: Nervada;
-    src: url(font.ttf);
+    src: url(Fonts/font.ttf);
 }
 
 @font-face {
     font-family: Sign;
-    src: url(Andrea\ Bellarosa.ttf);
+    src: url(Fonts/Andrea\ Bellarosa.ttf);
 }
-
 
 *{
     margin: 0;
@@ -20,29 +19,23 @@
     color: black;
 }
 
-
-/* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 10px;
-    height: 10px; /* Horizontal scrollbar */
+    height: 10px;
 }
 
-/* Track styling */
 ::-webkit-scrollbar-track {
     background: transparent;
 }
 
-/* Thumb styling */
 ::-webkit-scrollbar-thumb {
     background: #383838;
     border-radius: 5px;
 }
 
-/* Corner styling */
 ::-webkit-scrollbar-corner {
     background: #282828;
 }
-
 
 .container{
     display: block;
@@ -57,6 +50,7 @@
     z-index: 100000000000;
     animation: loading forwards 1.5s;
 }
+
 @keyframes loading {
     0%{
         right: 100%;
@@ -65,7 +59,6 @@
         right: -200%;
     }
 }
-
 
 .profile-page{
     display: block;
@@ -105,6 +98,7 @@ body{
     animation: 1s forwards opacity;
     animation-delay: 0.6s;
 }
+
 @keyframes opacity {
     0%{
         opacity: 0;
@@ -150,7 +144,6 @@ body{
     left: 700px;
     font-weight: 100;
     opacity: 0.8;
-
 }
 
 .work{
@@ -160,7 +153,6 @@ body{
     left: 430px;
     font-weight: 100;
     opacity: 0.8;
-
 }
 
 .location{
@@ -171,7 +163,6 @@ body{
     top: 500px;
     left: 680px;
     opacity: 0.8;
-
 }
 
 .logo{
@@ -195,6 +186,7 @@ body{
     animation: 0.6s forwards animee;
     z-index: 1000000000000000000000000000;
 }
+
 @keyframes animee {
     0%{
         top: 0;
@@ -215,6 +207,7 @@ body{
     animation: anime 0.5s forwards;
     z-index: 10000000000000000000000000000000;
 }
+
 @keyframes anime {
     0%{
         top: 650px;
@@ -318,7 +311,6 @@ body{
     -webkit-text-stroke: 1px white;
     animation: profilee 1s forwards;
     animation-delay: 1.6s;
-
 }
 
 @keyframes profilee {
@@ -338,7 +330,6 @@ body{
     -webkit-text-stroke: 1px white;
     animation: profileee 1s forwards;
     animation-delay: 1.7s;
-
 }
 
 @keyframes profileee {
@@ -358,7 +349,6 @@ body{
     -webkit-text-stroke: 1px white;
     animation: profileeee 1s forwards;
     animation-delay: 1.8s;
-
 }
 
 @keyframes profileeee {
@@ -421,7 +411,6 @@ body{
     top: 220px;
     left: 40px;
     background: linear-gradient(to right, transparent, #fff);
-
 }
 
 
@@ -434,7 +423,6 @@ body{
     top: 220px;
     left: 1150px;
     background: linear-gradient(to right, #fff, transparent);
-
 }
 
 .coding{
@@ -522,7 +510,6 @@ ul{
     top: 230px;
     left: 40px;
     background: linear-gradient(to top, transparent, #fff, transparent);
-
 }
 
 .frameworks{
@@ -587,7 +574,6 @@ ul{
     position: absolute;
     top: 470px;
     left: 750px;
-
 }
 
 .frame{
@@ -601,4 +587,48 @@ ul{
 a{
     text-decoration: none;
     color: inherit;
+}
+
+.instagram{
+    height: 40px;
+    position: absolute;
+    bottom: 70px;
+    left: 42%;
+    cursor: pointer;
+    opacity: 0;
+    animation: social 1s forwards;
+    animation-delay: 2s;
+}
+
+.youtube{
+    left: 46%;
+    animation-delay: 2.1s;
+}
+
+.x{
+    left: 50%;
+    animation-delay: 2.2s;
+}
+
+.in{
+    left: 54%;
+    animation-delay: 2.3s;
+
+}
+
+.pin{
+    left: 58%;
+    animation-delay: 2.4s;
+
+}
+
+@keyframes social {
+    0%{
+        bottom: 20px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 70px;
+        opacity: 1;
+    }
 }
