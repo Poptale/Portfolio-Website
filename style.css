@@ -8,6 +8,11 @@
     src: url(Fonts/Andrea\ Bellarosa.ttf);
 }
 
+@font-face {
+    font-family: Sunny;
+    src: url(Fonts/Weather\ Sunday\ -\ Personal\ Use.otf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -394,10 +399,9 @@ body{
 }
 
 .hobbies{
-    font-size: 110px;
-    font-family: Nervada;
+    font-size: 200px;
+    font-family: Sunny;
     font-weight: 100;
-    font-style: italic;
     padding: 120px 0 0 400px;
     position: relative;
 }
@@ -408,7 +412,7 @@ body{
     height: 10px;
     width: 350px;
     background-color: #fff;
-    top: 220px;
+    top: 250px;
     left: 40px;
     background: linear-gradient(to right, transparent, #fff);
 }
@@ -420,8 +424,8 @@ body{
     height: 10px;
     width: 350px;
     background-color: #fff;
-    top: 220px;
-    left: 1150px;
+    top: 250px;
+    left: 1100px;
     background: linear-gradient(to right, #fff, transparent);
 }
 
@@ -473,9 +477,17 @@ body{
     position: relative;
 }
 
+.skills{
+    left: 100px;
+}
+
+.skills::before{
+    left: 40px;
+}
+
 .skills::after{
     left: 1000px;
-    width: 500px;
+    width: 400px;
     background: linear-gradient(to right, #fff, transparent);
 }
 
@@ -486,34 +498,16 @@ body{
     font-size: 25px;
 }
 
-.skill::before{
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 100px;
-    background-color: #fff;
-    top: 18px;
-    left: -110px;
-}
-
 ul{
     position: absolute;
-    top: 400px;
-    left: 150px;
-}
-
-.line{
-    height: 1000px;
-    width: 2px;
-    background-color: #fff;
-    position: absolute;
-    top: 230px;
-    left: 40px;
-    background: linear-gradient(to top, transparent, #fff, transparent);
+    top: 500px;
+    left: 38%;
+    text-align: center;
+    list-style-type: none;
 }
 
 .frameworks{
-    top: 700px;
+    top: 850px;
 }
 
 .about{
@@ -530,7 +524,7 @@ ul{
 }
 
 .about-section{
-    height: 250vh;
+    height: 260vh;
     background-color: #101010;
 }
 
@@ -555,16 +549,21 @@ ul{
 .love{
     font-family: Sign;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 .curly{
     font-size: 300px;
     font-weight: 100;
     position: absolute;
-    left: 600px;
+    top: 410px;
+    left: 1000px;
     pointer-events: none;
     opacity: 0.8;
+}
+
+.curly-al{
+    left: 400px;
 }
 
 .lan{
@@ -572,16 +571,17 @@ ul{
     font-size: 50px;
     opacity: 0.9;
     position: absolute;
-    top: 470px;
-    left: 750px;
+    top: 400px;
+    left: 630px;
 }
 
 .frame{
     top: 760px;
+    left: 600px;
 }
 
 .curly2{
-    top: 600px;
+    top: 760px;
 }
 
 a{
